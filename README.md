@@ -1,4 +1,4 @@
-# Recruitment test steps
+# Recruitment test steps - dummy placeholder backend
 
 # copy env.example or rename the existing to .env
 
