@@ -1,11 +1,11 @@
 import * as express from 'express'
 import { v4 as uuidv4 } from 'uuid'
-import JSONAPISerializer from 'jsonapi-serializer'
+import { Serializer } from 'jsonapi-serializer'
 
-const surveySerializer = new JSONAPISerializer.Serializer('surveys', {
+const surveySerializer = new Serializer('surveys', {
   attributes: ['title', 'description', 'questions'],
 })
-const answersSerializer = new JSONAPISerializer.Serializer('surveyAnswers', {
+const answersSerializer = new Serializer('surveyAnswers', {
   attributes: ['questionId', 'answer'],
 })
 
