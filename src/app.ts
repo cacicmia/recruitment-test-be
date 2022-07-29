@@ -6,8 +6,15 @@ import cors from 'cors'
 require('dotenv').config()
 const port = process.env.PORT
 const app: Application = express()
+
 app.use(cors())
-app.use(bodyParser.json({ limit: '50mb', strict: false }))
+app.use(
+  bodyParser.json({
+    limit: '50mb',
+    strict: false,
+    type: 'application/vnd.api+json',
+  }),
+)
 app.use('/api/v1/survey', router)
 
 const server = app.listen(port, () => {
